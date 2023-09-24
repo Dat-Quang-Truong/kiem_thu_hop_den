@@ -3,6 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class GiamGiaTest {
 
+    // Ki thuat Kiem thu theo bang quyet dinh
     @Test
     void test1() {
         assertEquals(GiamGia.checkGiamGia(-1,2500000), "Input không hợp lệ");
@@ -10,7 +11,7 @@ public class GiamGiaTest {
 
     @Test
     void test2() {
-        assertEquals(GiamGia.checkGiamGia(6,-10000), "Input không hợp lệ");
+        assertEquals(GiamGia.checkGiamGia(3,-10000), "Input không hợp lệ");
     }
 
     @Test
@@ -41,5 +42,24 @@ public class GiamGiaTest {
     @Test
     void test8() {
         assertEquals(GiamGia.checkGiamGia(25,3500000), "Giảm 20%");
+    }
+
+    // Ki thuat Kiem thu phan hoach tuong duong
+    // Check nhung TH con thieu
+    @Test
+    void test9() {
+        assertEquals(GiamGia.checkGiamGia(-1,-1000), "Input không hợp lệ");
+    }
+    @Test
+    void test10() {
+        assertEquals(GiamGia.checkGiamGia(-1,100000), "Input không hợp lệ");
+    }
+    @Test
+    void test11() {
+        assertEquals(GiamGia.checkGiamGia(-1,3500000), "Input không hợp lệ");
+    }
+    @Test
+    void test12() {
+        assertEquals(GiamGia.checkGiamGia(20,-100000), "Input không hợp lệ");
     }
 }
