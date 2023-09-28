@@ -62,4 +62,30 @@ public class GiamGiaTest {
     void test12() {
         assertEquals(GiamGia.checkGiamGia(20,-100000), "Input không hợp lệ");
     }
+
+    //Ki thuat kiem thu voi do phu C2
+    @Test
+    void test13() {
+        assertEquals(GiamGia.checkGiamGia(-1,0), "Input không hợp lệ");
+    }
+
+    @Test
+    void test14() {
+        assertEquals(GiamGia.checkGiamGia(3,1000000), "Miễn phí");
+    }
+
+    @Test
+    void test15() {
+        assertEquals(GiamGia.checkGiamGia(10,1000000), "Không được giảm");
+    }
+
+    @Test
+    void test16() {
+        assertEquals(GiamGia.checkGiamGia(20,2500000), "Giảm 10%");
+    }
+
+    @Test
+    void test17() {
+        assertEquals(GiamGia.checkGiamGia(20,3500000), "Giảm 20%");
+    }
 }
